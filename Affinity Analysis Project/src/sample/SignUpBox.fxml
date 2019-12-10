@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.SignUpBoxController">
+  <children>
+    <GridPane layoutX="0.0" layoutY="0.0" prefHeight="450.0000999999975" prefWidth="400.0">
+      <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+          <children>
+            <Label layoutX="101.0" layoutY="52.0" text="Sign up now!">
+              <font>
+                <Font size="34.0" />
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+          <children>
+            <TextField id="userName1" fx:id="username1" layoutX="100.0" layoutY="26.0" onKeyReleased="#checkUsernameLength" prefWidth="200.0" promptText="Type Username" />
+            <TextField id="userName2" fx:id="username2" layoutX="100.0" layoutY="57.0" onKeyReleased="#checkUsernameLength" prefWidth="200.0" promptText="Re-Type Username" />
+            <Label layoutX="100.0" layoutY="10.0" text="Create Username" />
+            <Label layoutX="100.0" layoutY="109.0" text="Create Password" />
+            <PasswordField fx:id="password1" layoutX="100.0" layoutY="126.0" onKeyReleased="#checkPasswordLength" prefWidth="200.0" promptText="Type Password" />
+            <PasswordField fx:id="password2" layoutX="100.0" layoutY="157.0" onKeyReleased="#checkPasswordLength" prefWidth="200.0" promptText="Re-Type Password" />
+            <Button id="signInBtn" fx:id="signUpBtn" layoutX="272.0" layoutY="218.0" mnemonicParsing="false" onAction="#signUpButtonPressed" text="Sign Up" />
+            <Label fx:id="errorCodeTop" alignment="CENTER" layoutX="-1.0" layoutY="89.0" prefWidth="400.0" text="" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="errorCodeBottom" alignment="CENTER" layoutX="0.0" layoutY="189.0" prefWidth="398.0" text="" textAlignment="CENTER" textFill="RED" />
+            <Label fx:id="newUserLabel" alignment="CENTER" layoutX="-1.0" layoutY="257.0" prefWidth="398.0" text="" textAlignment="CENTER" />
+          </children>
+        </AnchorPane>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

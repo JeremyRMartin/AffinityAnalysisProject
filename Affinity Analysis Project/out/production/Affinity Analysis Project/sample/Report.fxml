@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Report">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" prefHeight="700.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Sports Report">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="275.0" layoutY="236.0" prefHeight="671.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="721.0" prefWidth="732.0" />
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Food Report">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab text="Visuals">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <PieChart id="PieChart" layoutX="14.0" layoutY="315.0" minWidth="188.0" prefHeight="173.0" prefWidth="188.0" />
+                <PieChart id="PieChart" layoutX="187.0" layoutY="482.0" minWidth="188.0" prefHeight="173.0" prefWidth="188.0" />
+                <PieChart id="PieChart" layoutX="375.0" layoutY="315.0" minWidth="188.0" prefHeight="173.0" prefWidth="188.0" />
+                <PieChart id="PieChart" fx:id="foodDislikeChart" layoutX="548.0" layoutY="482.0" minWidth="188.0" prefHeight="173.0" prefWidth="188.0" />
+                <Label layoutX="61.0" layoutY="569.0" rotate="45.0" text="SPORTS SURVERY" textAlignment="CENTER" />
+                <Label layoutX="603.0" layoutY="386.0" rotate="45.0" text="FOOD SURVEY" textAlignment="CENTER" />
+                <Label layoutX="459.0" layoutY="488.0" text="Like">
+                  <textFill>
+                    <Color blue="0.000" green="0.600" red="0.048" fx:id="x2" />
+                  </textFill>
+                </Label>
+                <Label layoutX="625.0" layoutY="472.0" text="Dislike">
+                  <textFill>
+                    <Color blue="0.200" green="0.200" red="1.000" fx:id="x1" />
+                  </textFill>
+                </Label>
+                <Label layoutX="264.0" layoutY="472.0" text="Dislike" textFill="$x1" />
+                <Label layoutX="98.0" layoutY="491.0" text="Like" textFill="$x2" />
+                        <BarChart fx:id="barchart" prefHeight="299.0" prefWidth="750.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="X" label="Options To Choose" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="Y" label="Number of Surveyors" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
